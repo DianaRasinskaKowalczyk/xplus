@@ -17,12 +17,27 @@ module.exports = {
       'navfont': ['10px', {
         lineHeight: '13.3px',
       }],
+      'board-font': ['17px', {
+        lineHeight: '23px',
+      }],
+      'main-font': ['14px', {
+        lineHeight: '19px',
+      }],
+      'button-font': ['13px', {
+        lineHeight: '17px',
+      }],
+
     },
+
+    
 
     colors: {
       'dark-blue': '#273371',
       'green': '#30CEAF',
       'background': '#F5F6FD',
+      'mainfont': '#151C3D',
+      'blue': '#2C52BF',
+      'white': '#FFFFFF',
     },
   
   plugins: [

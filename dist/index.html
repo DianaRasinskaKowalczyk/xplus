@@ -8,38 +8,41 @@
 
 <body>
 
-    <!-- Navigation-->
+<!-- Container-->
+<container class=" flex flex-row flex-none">
+
+  <!-- Navigation-->
 
     <nav class="w-20 h-full bg-white flex items-center flex-col">
         <div class="w-20 h-20">
           <img src="https://i.postimg.cc/W47Cxkcx/menu-logo.png" alt="LOGO" class="w-full h-full object-cover" />
         </div>
         <div class="w-20 h-20 flex flex-none flex-col items-center opacity-60 hover:opacity-100 hover:bg-background">
-          <div class="pt-5 pb-2.5">
+          <div class="pt-5 pb-2">
             <img src="https://i.postimg.cc/BbprYZg8/globe.jpg" alt="globe" class="w-5 h-5" />
           </div>
           <p class="font-bold font-sans text-dark-blue text-navfont">DISCOVER</p>
         </div>
-        <div class="w-20 h-20 flex flex-none flex-col items-center opacity-60 hover:opacity-100 hover:bg-background">
-          <div class="pt-5 pb-2.5">
+        <div class="flex-col w-20 h-20 flex flex-none items-center opacity-60 hover:opacity-100 hover:bg-background">
+          <div class="pt-5 pb-2">
             <img src="https://i.postimg.cc/Gtc9HBQn/automator.jpg" alt="AUTOMATOR" class="w-5 h-5" />
           </div>
           <p class="font-bold font-sans text-dark-blue text-navfont">AUTOMATOR</p>
         </div>
         <div class="w-20 h-20 flex flex-none flex-col items-center opacity-60 hover:opacity-100 hover:bg-background">
-          <div class="pt-5 pb-2.5">
+          <div class="pt-5 pb-2">
             <img src="https://i.postimg.cc/0y3TQLf8/ORCEHSTRATOR.jpg" alt="ORCHESTRATOR" class="w-5 h-5" />
           </div>
           <p class="font-bold font-sans text-dark-blue text-navfont">ORCHESTRATOR</p>
         </div>
         <div class="w-20 h-20 flex flex-none flex-col items-center opacity-60 hover:opacity-100 hover:bg-background">
-          <div class="pt-5 pb-2.5">
+          <div class="pt-5 pb-2">
             <img src="https://i.postimg.cc/k5myfsMQ/CHART-BAR.jpg" alt="CHART-BAR" class="w-5 h-5" />
           </div>
           <p class="font-bold font-sans text-dark-blue text-navfont">MONITOR</p>
         </div>
         <div class="w-20 h-20 flex flex-none flex-col items-center opacity-60 mb-16 hover:opacity-100 hover:bg-background">
-          <div class="pt-5 pb-2.5">
+          <div class="pt-5 pb-2">
             <img src="https://i.postimg.cc/d1zmpcGx/adjustments.jpg" alt="OPTIMIZOR" class="w-5 h-5" />
           </div>
             <p class="font-bold font-sans text-dark-blue text-navfont">OPTIMIZOR</p>
@@ -49,7 +52,7 @@
           <img src="https://i.postimg.cc/wxPR5dpC/folder.jpg" alt="folder" class="w-5 h-5" />
           </a>
         </div>
-        <div class="flex flex-row mt-6 relative">
+        <div class="flex flex-row mt-8 relative">
           <div class="ml-2 pt-2">
             <a href="#">
           <img src="https://i.postimg.cc/0ytf7y8p/Vector.jpg" alt="vector" class="w-5.5 h-5.5" />
@@ -59,17 +62,71 @@
           </a>
           </div>
         </div>
-        <div class="flex flex-none flex-col items-center mt-6 mb-7">
+        <div class="flex flex-none flex-col items-center mt-9 mb-8">
           <a href="#"> 
           <img src="https://i.postimg.cc/Bncvzj8K/user-circle.jpg" alt="circle" class="w-5.5 h-5.5 relative" />
           </a>
         </div>
-
     </nav>
-    
-  <!-- Container-->
-  <container class="w-full h-full flex flex-row flex-none">
 
+    <!-- Aside-->
+
+    <section class="w-56 h-full bg-white flex items-center flex-col flex-none">
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">Dashboard</h3>
+      </div>
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">Processes</h3>
+      </div>
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">Executions</h3>
+      </div>
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">User Actions</h3>
+      </div>
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">Projects</h3>
+      </div>
+      <div class="w-56 h-16">
+        <h3 class="text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans ml-6 mt-5">Audits</h3>
+      </div>
+
+    </section>
+
+    <!-- Main-->
+
+    <main class="w-full h-full flex items-center flex-col flex-none">
+      
+      <!-- Dropdown-->
+
+      <section class="flex flex-row flex-none w-full h-24 items-center bg-background">
+        <div class="w-52 h-8 flex flex-row justify-center ml-8 items-center">
+          <p class="font-sans font-semibold text-main-font text-mainfont text-opacity-60">Companies</p>
+          <div class="inline-block text-center dropdown ml-2">
+            <button class="flex items-center w-32 h-8 bg-white border border-blue rounded text-button-font">
+              <div class="ml-3.5 text-center"> 
+                  <p class="text-blue font-bold text-button-font font-sans">All Companies</p>
+              </div>
+                <div class="w-5 h-5 flex pl-1.5 items-center">
+                  <img src="https://i.postimg.cc/0NGw3Vf7/chevron-down.jpg" alt="down" class="h-3.5 w-4.5 text-blue" />
+                </div>
+            </button>
+          </div>
+        </div>
+
+
+      </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    
 
   </container>
 </body>
