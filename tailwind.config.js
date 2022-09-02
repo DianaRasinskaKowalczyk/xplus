@@ -3,7 +3,8 @@ module.exports = {
   content: ["./dist/**/*.html"],
   
   theme: {
-    extend: {},
+    extend: {
+    },
 
     container: {
       center: true,
@@ -29,7 +30,9 @@ module.exports = {
 
     },
 
-    
+    boxShadow: {
+      'chartShadow': '0px 2px 2px rgba(21, 28, 61, 0.24)',
+    },
 
     colors: {
       'dark-blue': '#273371',
