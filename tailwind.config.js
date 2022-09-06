@@ -12,6 +12,7 @@ module.exports = {
 
     fontFamily: {
       'sans': 'Segoe UI',
+      'roboto': 'Roboto',
     },
 
     fontSize: {
@@ -27,6 +28,15 @@ module.exports = {
       'button-font': ['13px', {
         lineHeight: '17px',
       }],
+      'round-chart': ['12px', {
+        lineHeight: '16px',
+      }],
+      'number': ['26px', {
+        lineHeight: '35px',
+      }],
+      'blue-button': ['13px', {
+        lineHeight: '15px',
+      }],
 
     },
 
@@ -41,8 +51,9 @@ module.exports = {
       'mainfont': '#151C3D',
       'blue': '#2C52BF',
       'white': '#FFFFFF',
+      'bar': '#E4E7FF',
     },
-  
+
   plugins: [
     require('tailwindcss'),
     require('autoprefixer'),
