@@ -52,6 +52,7 @@ module.exports = {
       'blue': '#2C52BF',
       'white': '#FFFFFF',
       'bar': '#E4E7FF',
+      'stripe': '#C6C8DD',
     },
 
   plugins: [

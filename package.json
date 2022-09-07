@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1", 
     "build": "tailwindcss build ./src/input.css -o ./dist/output.css --watch"
   },
