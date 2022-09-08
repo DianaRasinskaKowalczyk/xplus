@@ -3,3 +3,48 @@
 @tailwind utilities;
 
 
+@layer components {
+
+    .menu__icon {
+        @apply w-20 h-20 flex flex-col items-center opacity-60 hover:opacity-100 hover:bg-background;
+    };
+
+    .menu__text {
+        @apply font-bold font-sans text-dark-blue text-navfont pb-5;
+    };
+
+    .dashboard {
+        @apply text-board-font font-semibold text-dark-blue opacity-60 hover:opacity-100 font-sans pl-6 pt-5 pb-[21px];
+    };
+
+    .dropdown__text {
+        @apply font-sans font-semibold text-main-font text-mainfont text-opacity-60;
+    };
+
+    .dropdown__button {
+        @apply flex items-center bg-white border border-blue rounded text-button-font;
+    };
+
+    .chart__title {
+        @apply font-semibold pt-5 mb-[21px] ml-6 text-mainfont text-opacity-80 text-board-font;
+    };
+
+    .bar_background {
+        @apply flex w-20 h-4 bg-bar border-none rounded-[32px];
+    };
+
+    .bar_inside {
+        @apply flex flex-col rounded-l-[32px];
+    };
+
+    .big-chart_feature {
+        @apply bg-white font-sans rounded shadow-chartShadow overflow-hidden mr-8;
+    };
+};
+
+@layer utilities {
+
+    .tbody__text {
+        @apply font-normal text-main-font text-mainfont;
+    };
+}
