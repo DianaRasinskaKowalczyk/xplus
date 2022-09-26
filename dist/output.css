@@ -844,10 +844,6 @@ video {
   margin-right: 2rem;
 }
 
-.mr-\[10px\] {
-  margin-right: 10px;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1040,8 +1036,8 @@ video {
   padding-top: 21px;
 }
 
-.pb-\[\[10px\]px\] {
-  padding-bottom: [10px]px;
+.pb-\[10px\] {
+  padding-bottom: 10px;
 }
 
 .pt-2 {
@@ -1214,14 +1210,6 @@ video {
 
 .pr-\[62px\] {
   padding-right: 62px;
-}
-
-.pb-\[10pxpx\] {
-  padding-bottom: 10pxpx;
-}
-
-.pb-\[10px\] {
-  padding-bottom: 10px;
 }
 
 .text-center {
