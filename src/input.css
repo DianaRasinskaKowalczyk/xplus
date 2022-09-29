@@ -51,18 +51,18 @@
     };
 
     .scrollbar::-webkit-scrollbar {
-        width: 20px;
-        height: 20px;
+        width: 4px;
+  
       }
     
       .scrollbar::-webkit-scrollbar-track {
-        border-radius: 100vh;
-        background: #f7f4ed;
+        border-radius: 80px;
+        background: #FFFFFF;
       }
     
       .scrollbar::-webkit-scrollbar-thumb {
-        background: #e0cbcb;
-        border-radius: 100vh;
-        border: 3px solid #f6f7ed;
+        background: #C6C8DD;
+        border-radius: 80px;
+        border: 3px solid #C6C8DD;
       }
 }
