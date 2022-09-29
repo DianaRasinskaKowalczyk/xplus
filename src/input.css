@@ -40,6 +40,8 @@
     .big-chart_feature {
         @apply bg-white font-sans rounded shadow-chartShadow overflow-hidden mr-8;
     };
+
+
 };
 
 @layer utilities {
