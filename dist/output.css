@@ -691,10 +691,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.relative {
-  position: relative;
-}
-
 .m-0 {
   margin: 0px;
 }
@@ -734,26 +730,6 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.ml-\[58px\] {
-  margin-left: 58px;
-}
-
-.mr-10 {
-  margin-right: 2.5rem;
-}
-
-.mt-\[7px\] {
-  margin-top: 7px;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 
 .ml-\[717px\] {
@@ -852,10 +828,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -870,10 +842,6 @@ video {
 
 .h-24 {
   height: 6rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-8 {
@@ -896,8 +864,8 @@ video {
   width: 100%;
 }
 
-.w-3 {
-  width: 0.75rem;
+.w-32 {
+  width: 8rem;
 }
 
 .w-5 {
@@ -948,10 +916,6 @@ video {
   border-width: 1px;
 }
 
-.border-solid {
-  border-style: solid;
-}
-
 .border-blue {
   --tw-border-opacity: 1;
   border-color: rgb(44 82 191 / var(--tw-border-opacity));
@@ -985,19 +949,9 @@ video {
   background-repeat: no-repeat;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.px-\[2px\] {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .py-2 {
@@ -1013,6 +967,11 @@ video {
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-\[10px\] {
@@ -1060,16 +1019,16 @@ video {
   padding-right: 7px;
 }
 
-.pt-\[5px\] {
-  padding-top: 5px;
+.pt-\[4px\] {
+  padding-top: 4px;
 }
 
-.pb-\[8px\] {
-  padding-bottom: 8px;
+.pb-\[7px\] {
+  padding-bottom: 7px;
 }
 
-.pl-\[14px\] {
-  padding-left: 14px;
+.pl-\[12px\] {
+  padding-left: 12px;
 }
 
 .pr-12 {
@@ -1328,6 +1287,32 @@ video {
   border: 3px solid #C6C8DD;
 }
 
+.enchilada::-webkit-calendar-picker-indicator{
+  opacity:0;
+}
+
+.enchilada, .enchilada:focus{
+  background:#ffffff;
+}
+
+.quesadilla{
+  position:relative;
+}
+
+.quesadilla:after{
+  z-index:-1;
+  content: url(chevron-down.svg);
+  display: block;
+  font-size:2rem;
+  color: #2C52BF;
+  background: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top:13px;
+  right:-7px;
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -1345,10 +1330,4 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-@media (min-width: 1280px) {
-  .xl\:w-96 {
-    width: 24rem;
-  }
 }
