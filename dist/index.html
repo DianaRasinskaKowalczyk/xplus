@@ -10,13 +10,16 @@
 </head>
 
 <body>
+
+  
 <container class="flex flex-row">
 
   <!-- Navigation-->
-  <nav class="flex flex-col items-center" id="main">
+  <nav class="flex flex-col items-center">
     <ul class="bg-white flex items-center flex-col">
+
       <li class="w-20 h-20">
-        <a href="#">
+        <a href="#" class="menu-open-btn">
           <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="80" height="80" fill="#273371"/>
             <path d="M27 57.3722V50.0994H28.0973V56.4276H31.3928V57.3722H27Z" fill="white"/>
@@ -119,42 +122,47 @@
     </div>
   </nav>
 
-    <!-- Aside-->
-  <aside class="bg-white flex items-center flex-col" id="menu">
-    <ul>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[113px]">Dashboard</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[125px]">Processes</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[117px]">Executions</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[100px]">User Actions</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[138px]">Projects</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3 class="dashboard pr-[150px]">Audits</h3>
-       </a>
-      </li>
-    </ul>
-  </aside>
 
+    <!-- Aside-->
+
+
+  <aside class="offcanvas-menu w-56 h-screen flex duration-700 bg-white items-center flex-col">
+    <div class="w-full flex flex-col">
+            <ul>
+              <li>
+                <a href="#" class="menu-close-btn text-right text-4xl dashboard">&times;</a>
+                <a href="#">
+                  <h3 class="dashboard pr-[113px]">Dashboard</h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3 class="dashboard pr-[125px]">Processes</h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3 class="dashboard pr-[117px]">Executions</h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3 class="dashboard pr-[100px]">User Actions</h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3 class="dashboard pr-[138px]">Projects</h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3 class="dashboard pr-[150px]">Audits</h3>
+               </a>
+              </li>
+            </ul>
+    </div>
+</aside>
 
 
     <!-- Main Container-->
@@ -827,5 +835,24 @@
     </container>
   </container>
 </container> 
+
+      <!-- Javascript code -->
+      <script>
+        const menuOpenBtn = document.querySelector('.menu-open-btn');
+        const menuCloseBtn = document.querySelector('.menu-close-btn');
+        const offcanvasMenu = document.querySelector('.offcanvas-menu');
+
+        menuCloseBtn.addEventListener('click', function(){
+          offcanvasMenu.classList.remove('ml-0');
+          offcanvasMenu.classList.add('-ml-56');
+        });
+
+        menuOpenBtn.addEventListener('click', function(){
+          offcanvasMenu.classList.remove('-ml-56');
+          offcanvasMenu.classList.add('ml-0');
+        });
+
+    </script>
+
 </body>
 </html>

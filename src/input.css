@@ -66,11 +66,12 @@
         border: 3px solid #C6C8DD;
       }
 
+      
       .enchilada::-webkit-calendar-picker-indicator{
         opacity:0; 
       }
-      .enchilada, .enchilada:focus{
-        background:#ffffff; 
+      .enchilada, {
+        background:rgba(0,0,0,0); 
       }
 
       .quesadilla{
@@ -88,5 +89,9 @@
         position: absolute;
         top:13px;
         right:-7px;
+      }
+
+      ::-webkit-calendar-picker-indicator:hover{
+        cursor:pointer;
       }
 }
