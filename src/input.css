@@ -88,10 +88,10 @@
         opacity:0;
       }
  
-      .enchilada, .enchilada:focus{
+      /* .enchilada, .enchilada:focus{
           background:rgba(0,0,0,0)
         
-      }
+      } */
 
       ::-webkit-calendar-picker-indicator:hover{
         cursor:pointer;

@@ -124,8 +124,9 @@
 
 
     <!-- Aside-->
+  
 
-  <aside class="offcanvas-menu-1 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+  <aside class="offcanvas-menu-1 w-56 hidden -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -162,7 +163,7 @@
     </div>
   </aside>
 
-  <aside class="offcanvas-menu-2 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+  <aside class="offcanvas-menu-2 w-56 -ml-56 hidden h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -199,7 +200,7 @@
     </div>
   </aside>
 
-  <aside class="offcanvas-menu-3 w-56 -ml-56 hidden h-screen flex duration-700 bg-white items-center flex-col">
+  <aside class="offcanvas-menu-3 w-56 hidden -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -235,6 +236,7 @@
       </ul>
     </div>
   </aside>
+
 
 
     <!-- Main Container-->
@@ -909,12 +911,18 @@
 </container> 
 
       <!-- Javascript code -->
+
+      
       <script>
+
+      // document.querySelectorAll('aside').setAttribute('class', 'hidden');
+
         const menuOpenBtn1 = document.querySelector('.menu-open-btn-1');
         const offcanvasMenu1 = document.querySelector('.offcanvas-menu-1');
 
         menuOpenBtn1.addEventListener('click', function(){
           offcanvasMenu1.classList.toggle('ml-0');
+          offcanvasMenu1.classList.toggle('block');
         });
 
         const menuOpenBtn2 = document.querySelector('.menu-open-btn-2');
@@ -922,6 +930,7 @@
 
         menuOpenBtn2.addEventListener('click', function(){
           offcanvasMenu2.classList.toggle('ml-0');
+          offcanvasMenu2.classList.toggle('hidden');
         });
         
         const menuOpenBtn3 = document.querySelector('.menu-open-btn-3');
@@ -929,8 +938,11 @@
 
         menuOpenBtn3.addEventListener('click', function(){
           offcanvasMenu3.classList.toggle('ml-0');
+          offcanvasMenu3.classList.toggle('hidden');
         });
     </script>
+
+
 
 </body>
 </html>
