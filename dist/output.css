@@ -1335,6 +1335,7 @@ video {
 }
 
 .enchilada, .enchilada:focus{
+  background:rgba(0,0,0,0)
 }
 
 ::-webkit-calendar-picker-indicator:hover{
