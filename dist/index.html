@@ -998,8 +998,8 @@
     // asideClicked - indeks klikniętego aside przyporządkowany do danego menu
     const asideClicked = document.getElementById('asides').children[indexOfMenu - 1];
 
-      console.log(asideClicked.classList.contains('hidden'));
-      console.log(asideClicked.classList.contains('ml-0'));
+      // console.log(asideClicked.classList.contains('hidden'));
+      // console.log(asideClicked.classList.contains('ml-0'));
 
     // jeśli aside jest wysunięty
     if (asideClicked.classList.contains('ml-0')) {
@@ -1024,55 +1024,23 @@
     }
   };
 
+  // klikamy na menu
   document.getElementById('menu').addEventListener('click', (ev) => {
+
+    // ustalamy kliknięty element menu
     const clickedElement = ev.target;
+
+    //szukamy najbliższe 'li' klikniętego elementu
     const li = clickedElement.closest('li');
+
+    // szukamy indeksu klikniętego elementu menu
     const index = [...li.parentElement.children].indexOf(li);
     console.log(index);
-    showMenu(index);
 
+    // wywołanie funkcji showMenu z indeksem elementu menu 
+    showMenu(index);
   });
 
-
-
-    /*    
-       
-        const menuOpenBtn1 = document.querySelector('.menu-open-btn-1');
-        const offcanvasMenu1 = document.querySelector('.offcanvas-menu-1');
-        
-
-        menuOpenBtn1.addEventListener('click', function(){
-          turnOffAll();
-          offcanvasMenu1.classList.toggle('ml-0');
-          offcanvasMenu1.classList.remove('hidden');
-          
-        });
-
-        const menuOpenBtn2 = document.querySelector('.menu-open-btn-2');
-        const offcanvasMenu2 = document.querySelector('.offcanvas-menu-2');
-
-        menuOpenBtn2.addEventListener('click', function(){
-          turnOffAll();
-          offcanvasMenu2.classList.toggle('ml-0');
-          offcanvasMenu2.classList.remove('hidden');
-        });
-        
-        const menuOpenBtn3 = document.querySelector('.menu-open-btn-3');
-        const offcanvasMenu3 = document.querySelector('.offcanvas-menu-3');
-
-        menuOpenBtn3.addEventListener('click', function(){
-          turnOffAll();
-          offcanvasMenu3.classList.toggle('ml-0');
-          offcanvasMenu3.classList.remove('hidden');
-        });
-
-    */
-
-
-
-    </script>
-
-
-
+</script>
 </body>
 </html>
