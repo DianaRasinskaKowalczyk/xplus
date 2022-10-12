@@ -16,7 +16,7 @@
 
   <!-- Navigation-->
   <nav class="flex flex-col items-center z-10">
-    <ul class="bg-white flex items-center flex-col">
+    <ul id="menu" class="bg-white flex items-center flex-col">
       <li class="w-20 h-20">
         <a href="#">
           <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,8 +125,8 @@
 
     <!-- Aside-->
   
-
-  <aside class="offcanvas-menu-1 w-56 hidden -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+  <div id="asides">
+  <aside class="offcanvas-menu-1 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -163,7 +163,7 @@
     </div>
   </aside>
 
-  <aside class="offcanvas-menu-2 w-56 -ml-56 hidden h-screen flex duration-700 bg-white items-center flex-col">
+  <aside class="offcanvas-menu-2 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -200,7 +200,7 @@
     </div>
   </aside>
 
-  <aside class="offcanvas-menu-3 w-56 hidden -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+  <aside class="offcanvas-menu-3 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
     <div class="w-full flex flex-col">
       <ul>
         <li>
@@ -236,6 +236,81 @@
       </ul>
     </div>
   </aside>
+
+  <aside class="offcanvas-menu-4 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+    <div class="w-full flex flex-col">
+      <ul>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[113px]">Dashboard4</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[125px]">Processes4</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[117px]">Executions4</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[100px]">User Actions4</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[138px]">Projects4</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[150px]">Audits4</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <aside class="offcanvas-menu-5 w-56 -ml-56 h-screen flex duration-700 bg-white items-center flex-col">
+    <div class="w-full flex flex-col">
+      <ul>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[113px]">Dashboard5</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[125px]">Processes5</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[117px]">Executions5</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[100px]">User Actions5</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[138px]">Projects5</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h3 class="dashboard pr-[150px]">Audits5</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  </div>
 
 
 
@@ -910,36 +985,91 @@
   </container>
 </container> 
 
-      <!-- Javascript code -->
+<!-- Javascript code -->
 
-      
-      <script>
+<script>
 
-      // document.querySelectorAll('aside').setAttribute('class', 'hidden');
+  // wszystkie elementy są niewidoczne - 'hidden'
+  const turnOffAll = () => document.querySelectorAll('aside').forEach(aside => aside.setAttribute('class', 'hidden'));
 
+  // start funkcji showMenu / argument - indeks ikony w menu 
+  const showMenu = (indexOfMenu) => {
+
+    // asideClicked - indeks klikniętego aside przyporządkowany do danego menu
+    const asideClicked = document.getElementById('asides').children[indexOfMenu - 1];
+
+      console.log(asideClicked.classList.contains('hidden'));
+      console.log(asideClicked.classList.contains('ml-0'));
+
+    // jeśli aside jest wysunięty
+    if (asideClicked.classList.contains('ml-0')) {
+
+      // to nadajemy mu klasę'hidden'  
+      asideClicked.classList.add('hidden');
+
+      // i ukrywamy
+      asideClicked.classList.remove('ml-0');
+
+    // jeśli aside jest schowany
+    } else {
+
+      // to wszystkie elementy mają być niewidoczne
+      turnOffAll();
+
+      // kliknięty aside robi się widoczny
+      asideClicked.classList.remove('hidden');
+
+      // kliknięty aside wysuwa się na prawo
+      asideClicked.classList.add('ml-0');
+    }
+  };
+
+  document.getElementById('menu').addEventListener('click', (ev) => {
+    const clickedElement = ev.target;
+    const li = clickedElement.closest('li');
+    const index = [...li.parentElement.children].indexOf(li);
+    console.log(index);
+    showMenu(index);
+
+  });
+
+
+
+    /*    
+       
         const menuOpenBtn1 = document.querySelector('.menu-open-btn-1');
         const offcanvasMenu1 = document.querySelector('.offcanvas-menu-1');
+        
 
         menuOpenBtn1.addEventListener('click', function(){
+          turnOffAll();
           offcanvasMenu1.classList.toggle('ml-0');
-          offcanvasMenu1.classList.toggle('block');
+          offcanvasMenu1.classList.remove('hidden');
+          
         });
 
         const menuOpenBtn2 = document.querySelector('.menu-open-btn-2');
         const offcanvasMenu2 = document.querySelector('.offcanvas-menu-2');
 
         menuOpenBtn2.addEventListener('click', function(){
+          turnOffAll();
           offcanvasMenu2.classList.toggle('ml-0');
-          offcanvasMenu2.classList.toggle('hidden');
+          offcanvasMenu2.classList.remove('hidden');
         });
         
         const menuOpenBtn3 = document.querySelector('.menu-open-btn-3');
         const offcanvasMenu3 = document.querySelector('.offcanvas-menu-3');
 
         menuOpenBtn3.addEventListener('click', function(){
+          turnOffAll();
           offcanvasMenu3.classList.toggle('ml-0');
-          offcanvasMenu3.classList.toggle('hidden');
+          offcanvasMenu3.classList.remove('hidden');
         });
+
+    */
+
+
+
     </script>
 
 
